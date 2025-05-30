@@ -54,3 +54,17 @@ server:
 loan:
   processing:
     topic-name: loan-process-topic
+
+# ===========================
+# Actuator Configuration
+# ===========================
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,env,beans,loggers,threaddump
+  endpoint:
+    health:
+      show-details: always
+    shutdown:
+      enabled: true

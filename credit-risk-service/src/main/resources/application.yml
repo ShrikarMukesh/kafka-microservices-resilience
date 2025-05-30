@@ -17,3 +17,17 @@ spring:
       auto-offset-reset: latest
       properties:
         spring.json.trusted.packages: "*"
+
+# ===========================
+# Actuator Configuration
+# ===========================
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+    shutdown:
+      enabled: true
